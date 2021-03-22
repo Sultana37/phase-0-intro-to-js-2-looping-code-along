@@ -1,24 +1,20 @@
-// Code your solutions in this file
-const names=["Lisa","Kaitlin","Jan"];
-const celeb =["surprise"];
-function writeCards(names,celeb){
-    for (let i = 0; i < names.length; i++){
-        console.log(`Thank you ${names[i]}, for the wonderful ${celeb} gift`);
-        debugger;
-    }
-    return names;
+function writeCards(names,event){
+const massages=[];
+for (let i = 0; i < names.length; i++) {
+ const massage =`Thank you,${names[i]},for the wonderful $ {event},gift!`;  
+  massages.push(massage); 
 }
-writeCards(names,celeb);
-
-function countDown(number){
-let i = 0;
-while (number >= 0){
-    i++;
-    console.log({number});
-    number--;
+return massages;
 }
-countDown(10);
-countDown(4);
+const names=["Ada","Brendan","Ali"];
+const avent="birthday";
+writeCards(names,avent);
+console.log(writeCards(names,avent));
+console.log(countDown(10));      
+console.log(countDown(4));
 
-
-}
+function countDown(number) {
+  for(let i=number;i >=0;i--){
+      console.log(i);
+  }  
+}   
